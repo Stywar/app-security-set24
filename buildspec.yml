@@ -15,9 +15,9 @@ phases:
     - export KUBECONFIG=$HOME/.kube/config
     # Extracting AWS Credential Information using STS Assume Role for kubectl
     - echo "Setting Environment Variables related to AWS CLI for Kube Config Setup"
-    #- CREDENTIALS=$(aws sts assume-role --role-arn $EKS_KUBECTL_ROLE_ARN --role-session-name codebuild-kubectl --duration-seconds 900)
+    - CREDENTIALS=$(aws sts assume-role --role-arn $EKS_KUBECTL_ROLE_ARN --role-session-name codebuild-kubectl --duration-seconds 900)
     # Additional Commands to view your credentials 
-    #- echo "Credentials Value is..  ${CREDENTIALS}"
+    - echo "Credentials Value is..  ${CREDENTIALS}"
     # Configure Kubernetes
     # Install kubectl according to your EKS cluster version
     - curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.15.10/2020-02-22/bin/darwin/amd64/kubectl
