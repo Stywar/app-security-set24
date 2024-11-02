@@ -27,7 +27,7 @@ phases:
     # Create kubeconfig file for your EKS cluster, replace region and name values
     - echo UpdateConfig Kubernetes...
     - aws sts get-caller-identity
-    - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $EKS_CLUSTER_NAME
+    - aws eks --region $AWS_DEFAULT_REGION update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn $EKS_KUBECTL_ROLE_ARN
     - cat ~/.kube/config      
   pre_build:
     commands:
