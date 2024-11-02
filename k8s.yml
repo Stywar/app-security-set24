@@ -25,7 +25,7 @@ spec:
         - name: SPRING_CLOUD_CONFIG_URI
           value: http://44.202.101.171:8888       
         - name: AWS_ACCESS_KEY_ID
-          value: AKIAXX4OA7XMENCUXI77
+          value: xxxxxxxxxxxxxxxxxx
         - name: AWS_SECRET_ACCESS_KEY
           value: 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
         - name: AWS_DEFAULT_REGION
