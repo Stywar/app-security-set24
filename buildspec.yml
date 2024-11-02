@@ -56,6 +56,6 @@ phases:
       #- docker push $REPOSITORY_ECR_URI:$CODEBUILD_BUILD_NUMBER
       # Apply manifest
       - kubectl apply -f ./k8s.yml
-      - kubectl set image deployment/$EKS_NAME_DEPLOYMENT app-security=$REPOSITORY_ECR_URI:$CODEBUILD_BUILD_NUMBER
+      - kubectl set image deployment/$EKS_NAME_DEPLOYMENT app-account=$REPOSITORY_ECR_URI:$CODEBUILD_BUILD_NUMBER
       
       
